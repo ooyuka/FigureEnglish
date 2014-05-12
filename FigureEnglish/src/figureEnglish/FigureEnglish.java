@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class FigureEnglish {
 	
-    public static void main(String[] args) {
+    public static void main(String[] arg
+    		s) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
         

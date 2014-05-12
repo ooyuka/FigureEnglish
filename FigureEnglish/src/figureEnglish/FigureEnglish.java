@@ -26,6 +26,6 @@ public class FigureEnglish {
     	else if(n==9) s+="nine";
     	else if(n==10) s+="ten";
     	else s+="It is not a correct figure!";
-        return "";
+        return s;
     }
 }

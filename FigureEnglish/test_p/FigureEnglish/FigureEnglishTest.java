@@ -2,7 +2,6 @@ package FigureEnglish;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 import figureEnglish.FigureEnglish;
 
@@ -14,7 +13,7 @@ public class FigureEnglishTest {
 		String s = "zero";
 		//String t = "zero";
 		int n = 0;
-		String t = fig.translateEnglish(n);
+		String t = fig.translateEng(n);
 		System.out.println(t);
 		assertThat(s,is(t));
 	}

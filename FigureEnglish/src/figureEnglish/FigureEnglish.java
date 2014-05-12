@@ -14,21 +14,52 @@ public class FigureEnglish {
     // 数値を英訳する変換するメソッド
     static String translateEng(int n) {
     	String s="";
-    	int nlast = n%10;
-    	if(n/10==1) {
-    		if(n==10) s+="ten";
-    	    else if(n==11) s+="eleven";
-    	    else if(n==12) s+="twelve";
-    	    else if(n==13) s+="thirteen";
-    	    else if(n==14) s+="fourteen";
-    	    else if(n==15) s+="fifteen";
-    	    else if(n==16) s+="sixteen";
-    	    else if(n==17) s+="seventeen";
-    	    else if(n==18) s+="eighteen";
-    	    else if(n==19) s+="nineteen";
+    	int n3 = n%1000;
+    	int n2 = n%100;
+    	int nlast = n2%10;
+    	
+    	if(n/1000!=0) {
+    		int n1000 = n/1000;
+    	
+    		if(n1000==1) s+="one thousand ";
+    		else if(n1000==2) s+="two thousand ";
+    		else if(n1000==3) s+="three thousand ";
+    		else if(n1000==4) s+="four thousand ";
+    		else if(n1000==5) s+="five thousand ";
+    		else if(n1000==6) s+="six thousand ";
+    		else if(n1000==7) s+="seven thousand ";
+    		else if(n1000==8) s+="eight thousand ";
+    		else if(n1000==9) s+="nine thousand ";
     	}
-    	else if(n/10!=1) {
-    		int n10 = n/10;
+    	
+    	if(n3/100!=0) {
+    		int n100 = n3/100;
+    	
+    		if(n100==1) s+="one hundred ";
+    		else if(n100==2) s+="two hundred ";
+    		else if(n100==3) s+="three hundred ";
+    		else if(n100==4) s+="four hundred ";
+    		else if(n100==5) s+="five hundred ";
+    		else if(n100==6) s+="six hundred ";
+    		else if(n100==7) s+="seven hundred ";
+    		else if(n100==8) s+="eight hundred ";
+    		else if(n100==9) s+="nine hundred ";
+    	}
+    		
+    	if(n2/10==1) {
+    		if(n2==10) s+="ten";
+    	    else if(n2==11) s+="eleven";
+    	    else if(n2==12) s+="twelve";
+    	    else if(n2==13) s+="thirteen";
+    	    else if(n2==14) s+="fourteen";
+    	    else if(n2==15) s+="fifteen";
+    	    else if(n2==16) s+="sixteen";
+    	    else if(n2==17) s+="seventeen";
+    	    else if(n2==18) s+="eighteen";
+    	    else if(n2==19) s+="nineteen";
+    	}
+    	else if(n2/10!=1) {
+    		int n10 = n2/10;
     		if(n10==2) s+="twenty ";
     		else if(n10==3) s+="thirty ";
     		else if(n10==4) s+="forty ";
